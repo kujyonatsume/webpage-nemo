@@ -30,7 +30,9 @@
     </div>
     <footer class="footer p-y-3 text-right">
       <div class="container">
-        <p>制作者 : 夏目#2001</p>
+        <strong> 網頁設計 : 夏目#2001 <br>
+          開源 : <a href="https://github.com/adam200134/webpage-nemo">GitHub</a><br>
+        </strong>
       </div>
     </footer>
   </section>
