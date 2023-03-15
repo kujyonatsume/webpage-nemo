@@ -1,6 +1,6 @@
 <template>
       <div class="about container p-y-3">
-          <h2 class="text-center m-b-2">關於我們</h2>
+        <h1 class="text-center m-y-1">關於我們</h1>
           <div class="row">
             <div class="col-three-one">
               <div class="text-center m-y-2">

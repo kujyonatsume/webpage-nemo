@@ -1,6 +1,6 @@
 <template>
   <div class="action container p-y-3">
-    <h2 class="text-center m-b-2">活動</h2>
+    <h1 class="text-center m-y-1">活動</h1>
     <div class="row">
       <div class="col-three-one">
         <div class="text-center m-y-2">

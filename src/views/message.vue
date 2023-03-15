@@ -1,6 +1,6 @@
 <template>
   <div class="message container p-y-3">
-          <h2 class="text-center m-b-2">留言板</h2>
+    <h1 class="text-center m-y-1">留言板</h1>
           <div class="row">
             <div class="col-three-one">
               <div class="text-center m-y-2">
