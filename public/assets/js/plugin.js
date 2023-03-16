@@ -18,13 +18,18 @@ $(document).ready(async () => {
 
     /* $preloader 動畫 */
     async function preloader() {
-        var person = 0.5, cnt = 200
+        var person = 0.5, cnt = 200, 
+        $tab_bar = $('#tab-bar')
+        $tab_bar.css('top',-$tab_bar.outerHeight(true)+'px')
         for (let i = 1; i <= cnt; i++) {
             await delay(2)
             $('#load-bar').css('width', i * person + '%').text(i * person + '%')
             if (i != cnt) continue
             await delay(500)
-            var $preloader = $('#preloader').fadeToggle(1000, () => $preloader.remove())
+            var $preloader = $('#preloader').fadeToggle(1000, () => {
+                $preloader.remove()
+                $tab_bar.animate({ top: '0px' });
+            })
         }
     }
 })
