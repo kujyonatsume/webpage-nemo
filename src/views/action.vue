@@ -1,26 +1,17 @@
 <template>
-  <div id="action" class="container p-y-3">
-    <h1 class="text-center m-y-1">活動</h1>
+  <div id="action" class="container">
+    <h1 class="d-flex justify-content-center">活動</h1>
     <div class="row">
-      <div class="col-three-one">
-        <h1 class="text-center m-y-1">Fully Responsive</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem
-          veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.</p>
-      </div>
-      <div class="col-three-one animated">
-        <h1 class="text-center m-y-1">
-          Easy to learn
-        </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem
-          veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.</p>
-      </div>
-      <div class="col-three-one animated">
-        <h1 class="text-center m-y-1">
-          HTML + CSS
-        </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem
-          veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.</p>
-      </div>
+      <div class="col d-flex justify-content-center"> Column </div>
+      <div class="col d-flex justify-content-center"> Column </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center"> Column </div>
+      <div class="col d-flex justify-content-center"> Column </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center"> Column </div>
+      <div class="col d-flex justify-content-center"> Column </div>
     </div>
   </div>
 </template>

@@ -15,8 +15,7 @@ $(document).ready(async () => {
         }
     });
 
-
-    /* $preloader 動畫 */
+    /* preloader 動畫 */
     async function preloader() {
         var person = 0.5, cnt = 200, 
         $tab_bar = $('#tab-bar')
@@ -27,7 +26,7 @@ $(document).ready(async () => {
             if (i != cnt) continue
             await delay(500)
             var $preloader = $('#preloader').fadeToggle(1000, () => {
-                $preloader.remove()
+                $preloader.remove();
                 $tab_bar.animate({ top: '0px' });
             })
         }

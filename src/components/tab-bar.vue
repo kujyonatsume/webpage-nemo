@@ -1,6 +1,3 @@
-<script setup>
-
-</script>
 <template>
   <div class="fixed-top">
     <strong id="tab-bar" class="position-absolute container-fluid">
@@ -25,11 +22,13 @@
   </div>
 </template>
 <style lang="scss">
+
 #tab-bar {
   background-color: #0004;
 
   #top-title {
     padding-top: 10px;
+    color: #fc5b5b;
   }
 }
 </style>

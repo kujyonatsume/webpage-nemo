@@ -1,32 +1,17 @@
 <script setup>
-import mainform from "./components/main.vue";
+import tab_bar from "./components/tab-bar.vue";
+import preloader from "./components/preloader.vue";
 </script>
 <template>
-  <div id="preloader" class="position-fixed d-flex justify-content-center">
-    <div id="load" class="progress">
-      <div id="load-bar" class="progress-bar progress-bar-striped progress-bar-animated"></div>
-    </div>
+  <preloader />
+  <div id="main">
+    <tab_bar />
+    <section id="main-body">
+      <div class="bg-img">
+        <img src="../public/assets/img/bg/nemo.png" alt="" style="width: 100%;"><br><br>
+        <router-view />
+      </div>
+    </section>
   </div>
-  <mainform />
 </template>
-<style lang="scss">
-#preloader {
-  height: 100%;
-  width: 100%;
-  background: #000e;
-  z-index: 9999;
-
-  #load {
-    height: 40px;
-    width: 30%;
-    position: fixed;
-    top: 70%;
-
-    #load-bar {
-      width: 0%;
-      background-color: pink;
-      color: crimson;
-      text-align: left
-    }
-  }
-}</style>
+<style lang="scss"></style>
