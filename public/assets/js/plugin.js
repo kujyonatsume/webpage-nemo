@@ -1,29 +1,37 @@
-$(document).ready(() => {
-    var win_form = $(window),
-        main = $('#main').fadeToggle(1),
-        tab_bar = $('#tab-bar'),
-        title_h = 0
+$(document).ready(async () => {
 
-    /* preloader 動畫 */
-    var preloader = $('#preloader')
-        .css('z-index', '9999')
-        .css('background', '#000')
-        .css('height', win_form.outerHeight(true) + 'px')
-        .css('width', win_form.outerWidth(true) + 'px')
-        .fadeToggle(1000, () => {
-            preloader.remove();
-            main.fadeToggle(1000);
-            title_h = $('#top-title').outerHeight(true)
-        });
+    preloader();
 
     /* top-bar 平滑滾動 */
-    win_form.scroll(() => {
-        var scrollPos = win_form.scrollTop();
+    $(window).scroll(() => {
+        var $tab_bar = $('#tab-bar'),
+            scrollPos = $(window).scrollTop(),
+            title_h = $('#top-title').outerHeight(true)
         if (scrollPos == 0) {
-            tab_bar.animate({ top: '0px' });
+            $tab_bar.animate({ top: '0px' });
         }
-        else if (tab_bar.css('top') == '0px') {
-            tab_bar.animate({ top: -title_h + 'px' });
+        else if ($tab_bar.css('top') == '0px') {
+            $tab_bar.animate({ top: -title_h + 'px' });
         }
     });
-});
+
+
+    /* $preloader 動畫 */
+    async function preloader() {
+        var person = 0.5, cnt = 200
+        for (let i = 1; i <= cnt; i++) {
+            await delay(2)
+            $('#load-bar').css('width', i * person + '%').text(i * person + '%')
+            if (i != cnt) continue
+            await delay(500)
+            var $preloader = $('#preloader').fadeToggle(1000, () => $preloader.remove())
+        }
+    }
+})
+
+/* 延遲 */
+function delay(ms) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, ms);
+    });
+}

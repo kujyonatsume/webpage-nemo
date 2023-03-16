@@ -1,44 +1,25 @@
 <script setup>
-
+import mainform from "./components/main.vue";
 </script>
 <template>
-  <div class="position-fixed" id="preloader">
+  <div id="preloader" class="position-fixed d-flex justify-content-center">
+    <div id="load" class="progress">
+      <div id="load-bar" class="progress-bar progress-bar-striped progress-bar-animated"
+        style="width: 0%; background-color: pink; color: crimson; text-align:left"></div>
+    </div>
   </div>
-  <div id="main" class="">
-  <section id="tab-bar" class="fixed-top">
-    <div class="position-absolute container-fluid bg-pink">
-      <h1 id="top-title" class="d-flex justify-content-center" style="padding-top: 10px;">測試版企劃網站</h1>
-      <nav class="navbar navbar-expand justify-content-center">
-        <ul class="navbar-nav navbar-nav-scroll1">
-          <li class="nav-item">
-            <router-link class="nav-link" to="/intro">生日企劃</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/message">絆星留言版</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link disabled" to="/action">以往的企畫</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/about">關於我們</router-link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-  <section id="main-body" class="position-absolute">
-    <div class="bg-img">
-      <img src="../public/assets/img/bg/nemo.png" alt="" style="width: 100%;" />
-      <router-view />
-    </div>
-    <footer class="footer p-y-3 text-right">
-      <div class="container">
-        <strong> 網頁設計 : 夏目#2001 <br>
-          開源 : <a href="https://github.com/kujyonatsume/webpage-nemo">GitHub</a><br>
-        </strong>
-      </div>
-    </footer>
-  </section>
-</div>
+  <mainform />
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+#preloader {
+  height: 100%;
+  width: 100%;
+  background: #000e;
+  z-index: 9999;
+  #load {
+    height: 40px;
+    width: 30%;
+    position: fixed;
+    top: 70%;
+  }
+}</style>
