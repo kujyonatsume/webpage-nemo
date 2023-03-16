@@ -4,7 +4,7 @@
 <template>
     <section id="tab-bar" class="fixed-top">
       <div class="position-absolute container-fluid bg-pink">
-        <h1 id="top-title" class="d-flex justify-content-center" style="padding-top: 10px;">測試版企劃網站</h1>
+        <h1 id="top-title" class="d-flex justify-content-center">測試版企劃網站</h1>
         <nav class="navbar navbar-expand justify-content-center">
           <ul class="navbar-nav navbar-nav-scroll1">
             <li class="nav-item">
@@ -24,4 +24,8 @@
       </div>
     </section>
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+#top-title {
+  padding-top: 10px;
+}
+</style>
