@@ -4,7 +4,7 @@
   </footer>
 </template>
 <style lang="scss">
-#floor{
+#floor {
   padding: 10px;
 }
 </style>
