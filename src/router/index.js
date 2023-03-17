@@ -1,19 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+import intro from "../views/intro.vue";
+import message from "../views/message.vue";
+import action from "../views/action.vue";
+import about from "../views/about.vue";
 export default createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes: [
-    route("intro"),
-    route("message"),
-    route("action"),
-    route("about")
+    { path: "/intro", name: "intro", component: intro },
+    { path: "/message", name: "message", component: message },
+    { path: "/action", name: "action", component: action },
+    { path: "/about", name: "about", component: about }
   ]
 })
-
-function route(name = "home") {
-  return {
-    name,
-    path: '/' + name,
-    component: import(`../views/${name}.vue`)
-  }
-}
